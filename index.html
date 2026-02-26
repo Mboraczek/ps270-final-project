@@ -116,7 +116,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/header-attrs-2.17/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.30/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js","WB_WDI_SE_XPD_TOTL_GD_ZS.csv"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1545,8 +1545,106 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <h2 id="project-thoughts">Project thoughts</h2>
-<p>I am interested in exploring data related to social norms and the effects on economic decisions, behavioral economics, social decisions that impact legal relations</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>MyData</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/utils/read.table.html'>read.csv</a></span><span class='op'>(</span><span class='st'>"WB_WDI_SE_XPD_TOTL_GD_ZS.csv"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>MyData</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>      STRUCTURE               STRUCTURE_ID ACTION FREQ REF_AREA
+1 datastructure WB.DATA360:DS_DATA360(1.3)      I    A      VNM
+2 datastructure WB.DATA360:DS_DATA360(1.3)      I    A      PSE
+3 datastructure WB.DATA360:DS_DATA360(1.3)      I    A      ZMB
+4 datastructure WB.DATA360:DS_DATA360(1.3)      I    A      AFE
+5 datastructure WB.DATA360:DS_DATA360(1.3)      I    A      AFW
+6 datastructure WB.DATA360:DS_DATA360(1.3)      I    A      CSS
+                 INDICATOR SEX AGE URBANISATION UNIT_MEASURE
+1 WB_WDI_SE_XPD_TOTL_GD_ZS  _T  _T           _T       PT_GDP
+2 WB_WDI_SE_XPD_TOTL_GD_ZS  _T  _T           _T       PT_GDP
+3 WB_WDI_SE_XPD_TOTL_GD_ZS  _T  _T           _T       PT_GDP
+4 WB_WDI_SE_XPD_TOTL_GD_ZS  _T  _T           _T       PT_GDP
+5 WB_WDI_SE_XPD_TOTL_GD_ZS  _T  _T           _T       PT_GDP
+6 WB_WDI_SE_XPD_TOTL_GD_ZS  _T  _T           _T       PT_GDP
+  COMP_BREAKDOWN_1 COMP_BREAKDOWN_2 COMP_BREAKDOWN_3 TIME_PERIOD
+1               _Z               _Z               _Z        2011
+2               _Z               _Z               _Z        2011
+3               _Z               _Z               _Z        2011
+4               _Z               _Z               _Z        2012
+5               _Z               _Z               _Z        2012
+6               _Z               _Z               _Z        2012
+  AGG_METHOD UNIT_TYPE DECIMALS DATABASE_ID TIME_FORMAT
+1         _Z     RATIO        2      WB_WDI         P1Y
+2         _Z     RATIO        2      WB_WDI         P1Y
+3         _Z     RATIO        2      WB_WDI         P1Y
+4         _Z     RATIO        2      WB_WDI         P1Y
+5         _Z     RATIO        2      WB_WDI         P1Y
+6         _Z     RATIO        2      WB_WDI         P1Y
+                                             COMMENT_TS UNIT_MULT
+1 Government expenditure on education, total (% of GDP)         0
+2 Government expenditure on education, total (% of GDP)         0
+3 Government expenditure on education, total (% of GDP)         0
+4 Government expenditure on education, total (% of GDP)         0
+5 Government expenditure on education, total (% of GDP)         0
+6 Government expenditure on education, total (% of GDP)         0
+  DATA_SOURCE OBS_CONF OBS_VALUE OBS_STATUS FREQ_LABEL
+1      WB_WDI       PU  3.780230          A     Annual
+2      WB_WDI       PU  5.335280          A     Annual
+3      WB_WDI       PU  3.357723          A     Annual
+4      WB_WDI       PU  4.676120          A     Annual
+5      WB_WDI       PU  2.688400          A     Annual
+6      WB_WDI       PU  3.573980          A     Annual
+             REF_AREA_LABEL
+1                   Vietnam
+2        West Bank and Gaza
+3                    Zambia
+4 Eastern &amp; Southern Africa
+5  Western &amp; Central Africa
+6    Caribbean small states
+                                        INDICATOR_LABEL SEX_LABEL
+1 Government expenditure on education, total (% of GDP)     Total
+2 Government expenditure on education, total (% of GDP)     Total
+3 Government expenditure on education, total (% of GDP)     Total
+4 Government expenditure on education, total (% of GDP)     Total
+5 Government expenditure on education, total (% of GDP)     Total
+6 Government expenditure on education, total (% of GDP)     Total
+                              AGE_LABEL URBANISATION_LABEL
+1 All age ranges or no breakdown by age              Total
+2 All age ranges or no breakdown by age              Total
+3 All age ranges or no breakdown by age              Total
+4 All age ranges or no breakdown by age              Total
+5 All age ranges or no breakdown by age              Total
+6 All age ranges or no breakdown by age              Total
+  UNIT_MEASURE_LABEL COMP_BREAKDOWN_1_LABEL COMP_BREAKDOWN_2_LABEL
+1  Percentage of GDP         Not Applicable         Not Applicable
+2  Percentage of GDP         Not Applicable         Not Applicable
+3  Percentage of GDP         Not Applicable         Not Applicable
+4  Percentage of GDP         Not Applicable         Not Applicable
+5  Percentage of GDP         Not Applicable         Not Applicable
+6  Percentage of GDP         Not Applicable         Not Applicable
+  COMP_BREAKDOWN_3_LABEL AGG_METHOD_LABEL UNIT_TYPE_LABEL
+1         Not Applicable   Not Applicable           Ratio
+2         Not Applicable   Not Applicable           Ratio
+3         Not Applicable   Not Applicable           Ratio
+4         Not Applicable   Not Applicable           Ratio
+5         Not Applicable   Not Applicable           Ratio
+6         Not Applicable   Not Applicable           Ratio
+  DECIMALS_LABEL                  DATABASE_ID_LABEL TIME_FORMAT_LABEL
+1            Two World Development Indicators (WDI)            Annual
+2            Two World Development Indicators (WDI)            Annual
+3            Two World Development Indicators (WDI)            Annual
+4            Two World Development Indicators (WDI)            Annual
+5            Two World Development Indicators (WDI)            Annual
+6            Two World Development Indicators (WDI)            Annual
+  UNIT_MULT_LABEL OBS_STATUS_LABEL OBS_CONF_LABEL
+1           Units     Normal value         Public
+2           Units     Normal value         Public
+3           Units     Normal value         Public
+4           Units     Normal value         Public
+5           Units     Normal value         Public
+6           Units     Normal value         Public</code></pre>
+</div>
+<p>This study asks whether higher government expenditure on education as a percentage of GDP leads to greater subsequent economic growth. Drawing on human capital theory, the hypothesis is that countries that invest more heavily in education will experience higher GDP per capita growth over time because education increases workforce skills, productivity, and innovation, which systematically drive long-run economic performance. The explanatory variable is government expenditure on education (% of GDP), measured annually using World Bank World Development Indicators data from 1970–2023, which varies both across countries and over time. The outcome variable is annual GDP per capita growth rate, also measured using World Bank data. Support for the hypothesis would be demonstrated by a positive relationship between education spending and future GDP per capita growth, such that countries allocating a larger share of GDP to education experience higher growth rates. The hypothesis would be disproved if there is no statistically meaningful relationship or if the relationship is negative, suggesting that higher education spending does not systematically translate into stronger economic growth.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
