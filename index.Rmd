@@ -10,5 +10,9 @@ output:
 
 
 ## Project thoughts
+```{r}
+MyData <- read.csv("WB_WDI_SE_XPD_TOTL_GD_ZS.csv")
 
-I am interested in exploring data related to social norms and the effects on economic decisions, behavioral economics, social decisions that impact legal relations 
+head(MyData)
+```
+This study asks whether higher government expenditure on education as a percentage of GDP leads to greater subsequent economic growth. Drawing on human capital theory, the hypothesis is that countries that invest more heavily in education will experience higher GDP per capita growth over time because education increases workforce skills, productivity, and innovation, which systematically drive long-run economic performance. The explanatory variable is government expenditure on education (% of GDP), measured annually using World Bank World Development Indicators data from 1970–2023, which varies both across countries and over time. The outcome variable is annual GDP per capita growth rate, also measured using World Bank data. Support for the hypothesis would be demonstrated by a positive relationship between education spending and future GDP per capita growth, such that countries allocating a larger share of GDP to education experience higher growth rates. The hypothesis would be disproved if there is no statistically meaningful relationship or if the relationship is negative, suggesting that higher education spending does not systematically translate into stronger economic growth.
