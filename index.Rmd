@@ -8,17 +8,22 @@ output:
 ---
 
 
-```{r, eval= TRUE}
+```{r, eval = TRUE}
 
 library(tidyverse)
 
 MyData <- read.csv("WB_WDI_SE_XPD_TOTL_GD_ZS.csv")
-
-
-head(MyData) 
+MyData |>
+  filter(REF_AREA_LABEL %in% c("United States", "Canada", "Mexico")) |>
+  select(
+    country = REF_AREA_LABEL,
+    year = TIME_PERIOD,
+    edu_spending_pct_gdp = OBS_VALUE
+  ) |>
+  head()
 ```
 ## Project thoughts
 
-This study asks whether higher government expenditure on education as a percentage of GDP leads to greater subsequent economic growth. Drawing on human capital theory, the hypothesis is that countries that invest more heavily in education will experience higher GDP per capita growth over time because education increases workforce skills, productivity, and innovation, which systematically drive long-run economic performance. The explanatory variable is government expenditure on education (% of GDP), measured annually using World Bank World Development Indicators data from 1970–2023, which varies both across countries and over time. The outcome variable is annual GDP per capita growth rate, also measured using World Bank data. Support for the hypothesis would be demonstrated by a positive relationship between education spending and future GDP per capita growth, such that countries allocating a larger share of GDP to education experience higher growth rates. The hypothesis would be disproved if there is no statistically meaningful relationship or if the relationship is negative, suggesting that higher education spending does not systematically translate into stronger economic growth.
+This study asks whether higher government expenditure on education as a percentage of GDP leads to greater subsequent economic growth. Since this Data set is massive, I am going to just be focusing on North America: Canada, United States, and Mexico. Drawing on human capital theory, the hypothesis is that countries that invest more heavily in education will experience higher GDP per capita growth over time because education increases workforce skills, productivity, and innovation, which systematically drive long-run economic performance. The independent variable is government expenditure on education (% of GDP), measured annually using World Bank World Development Indicators data from 1970–2023, which varies both across countries and over time. The dependent variable would be the annual GDP per capita growth rate, also measured using World Bank data. Support for the hypothesis would be demonstrated by a positive relationship between education spending and future GDP per capita growth, such that countries allocating a larger share of GDP to education experience higher growth rates. The hypothesis would be disproved if there is no statistically meaningful relationship or if the relationship is negative, suggesting that higher education spending does not systematically translate into stronger economic growth.
 
 Just for presentation purposes, I had to drop the other variables since the data set was too large. 
